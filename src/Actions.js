@@ -26,4 +26,4 @@ export function setVisibilityFilter(filter){
 
 
 
-dispatch(addTodo(text))
+//dispatch(addTodo(text))
