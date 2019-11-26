@@ -25,7 +25,9 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     onToDoClick: id => {
-      // {type: "TOGGLE_TODO", payload: 1}
+      dispatch({type: "TOGGLE_TODO", payload: id})
+    },
+    onDeleteToDo: id => {
       dispatch(deleteTodo(id))
     }
   }

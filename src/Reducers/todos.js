@@ -2,7 +2,7 @@ import { ADD_TODO, TOGGLE_TODO, DELETE_TODO } from '../Actions'
 
 function todos(
   state = [
-    { text: 'Feed the cat', completed: true },
+    { text: 'Feed the cat', completed: false },
     { text: 'Make bed', completed: false }
   ],
   action
@@ -20,7 +20,7 @@ function todos(
     case DELETE_TODO:
       return state.filter((todo, index) => {
         if(index !== action.payload){
-          return {...todo}
+          return todo
         }
       })
     default:
